@@ -20,7 +20,7 @@ image:kubernetes-aws-smile.png[alt="kubernetes and aws logos", align="left",widt
 |link:01-path-basics/103-kubernetes-concepts[103: Introduction to the Kubernetes CLI]
 |link:02-path-working-with-clusters/201-cluster-monitoring[201: Monitoring a Kubernetes Cluster]
 |link:03-path-application-development/302-app-discovery[302: Service Discovery for Microservices]
-|link:03-path-application-development/303-app-update[303: Updating Applications on Kubernetes]
+|link:03-path-application-development/304-app-scaling[304: Scaling Applications on Kubernetes]
 |link:05-path-next-steps/502-for-further-reading[502: For Further Reading]
 |=====
 

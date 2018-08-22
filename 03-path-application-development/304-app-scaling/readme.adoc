@@ -16,12 +16,11 @@ HPA can automatically scale pods deployed in a replication controller, deploymen
 
 In order to perform exercises in this chapter, you’ll need to deploy configurations to a Kubernetes cluster. To create an EKS-based Kubernetes cluster, use the link:../../01-path-basics/102-your-first-cluster#create-a-kubernetes-cluster-with-eks[AWS CLI] (recommended). If you wish to create a Kubernetes cluster without EKS, you can instead use link:../../01-path-basics/102-your-first-cluster#alternative-create-a-kubernetes-cluster-with-kops[kops].
 
-Deploy Heapster using the steps described in the link:../../02-path-working-with-clusters/201-cluster-monitoring#installation[Cluster Monitoring] lab. You can deploy Heapster using the configuration file `cluster-monitoring/heapster/templates/heapster.yaml`:
+Deploy Heapster using the steps described in the link:../../02-path-working-with-clusters/201-cluster-monitoring#installation[Cluster Monitoring] lab. 
 
-    $ kubectl create -f templates/heapster/heapster.yaml
-    serviceaccount "heapster" created
-    deployment "heapster" created
-    service "heapster" created
+Kubernetes 1.8 starts to use Metrics api to expose metrics for HPA. Need to install metrics server for this to work. 
+
+    $ kubectl apply -f  https://raw.githubusercontent.com/kubernetes/kops/master/addons/metrics-server/v1.8.x.yaml
 
 == Deploy an application
 
