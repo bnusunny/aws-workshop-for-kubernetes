@@ -3,7 +3,7 @@
 source env.config
 
 # change this to your id
-cluster_name='<iam-id>.zhy.k8s.local'
+cluster_name='harold.cartechfin.k8s.local'
 
 # official CoreOS AMI
 #ami='ami-e7958185'

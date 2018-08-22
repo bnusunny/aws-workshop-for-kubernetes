@@ -19,7 +19,7 @@ All scripts for Kops fast bootstrapping in NinXia(cn-northwest-1) region.
 3. run the create script
 
 ```bash
-$ bash create_cluster_localmirror.sh
+$ bash create_cluster.sh
 ```
 
 You will see message like this, please ignore it, as we are using an alternative `--kubernetes-version` specified in the `kops create cluster` and kops will consider this as an older version.
@@ -34,6 +34,7 @@ A new kubernetes version is available: 1.9.3
 4. Finally, update your cluster with `—yes`
 
 ```bash
+ source ./env.config
  kops update cluster cluster.zhy.k8s.local --yes
 ```
 
