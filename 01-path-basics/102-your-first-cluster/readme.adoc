@@ -12,12 +12,11 @@ All scripts for Kops fast bootstrapping in NinXia(cn-northwest-1) region.
 
 == Usage
 
-1. update your [env.config](./env.config)
+1. update your link:./env.config[env.config]
 
-2. update your [create cluster script](./create_cluster.sh), set your `vpcid` correctly and make sure `--ssh-public-key` points to your local SSH public key path. Update <iam-id> in cluster_name with your IAM user ID.
+2. update your link:./create_cluster.sh[create cluster script], set your `vpcid` correctly and make sure `--ssh-public-key` points to your local SSH public key path. Update <iam-id> in cluster_name with your IAM user ID.
 
 3. run the create script
-
 
 ```bash
 $ bash create_cluster_localmirror.sh
