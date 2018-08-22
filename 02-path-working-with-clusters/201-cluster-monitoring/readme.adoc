@@ -144,7 +144,7 @@ Lets forward the grafana dashboard to a local port:
   $ kubectl port-forward $(kubectl get pod -l app=grafana -o jsonpath={.items[0].metadata.name} -n monitoring) 3000 -n monitoring
   Forwarding from 127.0.0.1:3000 -> 3000
 
-Grafana dashboard is now accessible at http://localhost:3000/. The complete list of dashboards is available using the search button at the top:
+Grafana dashboard is now accessible at http://localhost:3000/. Default login is admin/admin. The complete list of dashboards is available using the search button at the top:
 
 image::monitoring-grafana-prometheus-dashboard-dashboard-home.png[]
 
