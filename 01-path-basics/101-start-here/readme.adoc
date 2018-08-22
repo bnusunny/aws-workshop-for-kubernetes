@@ -36,7 +36,7 @@ Download the installer and include it in your PATH.
 
 Install the Kubectl CLI on Mac: 
 
-    $ brew installk kubectl
+    $ brew install kubectl
 
 Add kubectl autocompletion to your current shell:
 
