@@ -79,8 +79,8 @@ kops needs a "`state store`" to store configuration information of the cluster. 
 [NOTE]
 The bucket name must be unique otherwise you will encounter an error on deployment. We will use an example bucket name of `kops-state-store-` and add your IAM user ID
 
-    $ export IAM-ID=<your iam user id>
-    $ export S3_BUCKET=kops-state-store-${IAM-ID}
+    $ export IAM_ID=<your iam user id>
+    $ export S3_BUCKET=kops-state-store-${IAM_ID}
     $ export KOPS_STATE_STORE=s3://${S3_BUCKET}
     $ aws s3 mb $KOPS_STATE_STORE
     $ aws s3api put-bucket-versioning --bucket $S3_BUCKET --versioning-configuration Status=Enabled
