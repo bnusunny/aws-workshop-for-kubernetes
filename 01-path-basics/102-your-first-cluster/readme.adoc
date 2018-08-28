@@ -30,7 +30,6 @@ A new kubernetes version is available: 1.10.5
 4. Finally, update your cluster with `—yes`. This will apply the changes and create kops cluster on AWS. 
 
 ```bash
- source ./env.config
  kops update cluster cluster.zhy.k8s.local --yes
 ```
 
