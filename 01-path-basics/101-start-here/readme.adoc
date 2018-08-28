@@ -23,8 +23,8 @@ After installation, you need to configure aws cli by executing 'aws configure'. 
     $ aws configure
     AWS Access Key ID [****************ZHVQ]:
     AWS Secret Access Key [****************eJr2]:
-    Default region name [cn-northwest-1]:
-    Default output format [json]:
+    Default region name [cn-northwest-1]: cn-northwest-1
+    Default output format [json]: json
 
 === Install Kubectl CLI
 
