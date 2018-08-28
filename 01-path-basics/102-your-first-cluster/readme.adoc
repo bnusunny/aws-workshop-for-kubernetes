@@ -4,13 +4,9 @@
 :linkattrs:
 :imagesdir: ../../resources/images
 
-This section will walk you through how to install a Kubernetes cluster on AWS using kops.
+This section will walk you through how to install a Kubernetes cluster on AWS China Ningxia region using kops.
 
-= fastboot for NinXia(cn-northwest-1) region
-
-All scripts for Kops fast bootstrapping in NinXia(cn-northwest-1) region.
-
-== Usage
+== Usage on Mac and Linux
 
 1. update your link:./env.config[env.config]
 
@@ -19,23 +15,51 @@ All scripts for Kops fast bootstrapping in NinXia(cn-northwest-1) region.
 3. run the create script
 
 ```bash
-$ bash create_cluster.sh
+ bash create_cluster.sh
 ```
 
 You will see message like this, please ignore it, as we are using an alternative `--kubernetes-version` specified in the `kops create cluster` and kops will consider this as an older version.
 
 
 ```bash
-A new kubernetes version is available: 1.9.3
+A new kubernetes version is available: 1.10.5
     Upgrading is recommended (try kops upgrade cluster)
     More information: https://github.com/kubernetes/kops/blob/master/permalinks/upgrade_k8s.md#1.9.3
 ```
 
-4. Finally, update your cluster with `—yes`
+4. Finally, update your cluster with `—yes`. This will apply the changes and create kops cluster on AWS. 
 
 ```bash
  source ./env.config
  kops update cluster cluster.zhy.k8s.local --yes
 ```
 
-When the master nodes under `ELB` become healthy, you may access your cluster with `kubectl`. Typically it would take `5-8` minutes to become all healthy.
+Typically it would take `3-5` minutes for the cluster to be created. You can use `kubectl get nodes` to check if all nodes are ready. 
+
+== Usage for Windows
+
+1. update your link:./create_cluster.bat[create cluster script], set your `vpcid` correctly and make sure `--ssh-public-key` points to your local SSH public key path. Update <iam_id> in cluster_name with your IAM user ID.
+
+2. run the create script
+
+```bash
+  ./create_cluster.bat
+```
+
+You will see message like this, please ignore it, as we are using an alternative `--kubernetes-version` specified in the `kops create cluster` and kops will consider this as an older version.
+
+
+```bash
+A new kubernetes version is available: 1.10.5
+    Upgrading is recommended (try kops upgrade cluster)
+    More information: https://github.com/kubernetes/kops/blob/master/permalinks/upgrade_k8s.md#1.9.3
+```
+
+3. Finally, update your cluster with `—yes`. This will apply the changes and create kops cluster on AWS. 
+
+```bash
+ source ./env.config
+ kops update cluster cluster.zhy.k8s.local --yes
+```
+
+Typically it would take `3-5` minutes for the cluster to be created. You can use `kubectl get nodes` to check if all nodes are ready. 
