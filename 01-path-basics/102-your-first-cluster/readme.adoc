@@ -6,7 +6,7 @@
 
 This section will walk you through how to install a Kubernetes cluster on AWS China Ningxia region using kops.
 
-== Usage on Mac and Linux
+== Usage for Mac and Linux
 
 1. update your link:./env.config[env.config]
 
