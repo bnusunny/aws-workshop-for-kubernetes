@@ -14,15 +14,11 @@ This section will walk you through how to install a Kubernetes cluster on AWS Ch
 
 3. run the create script
 
-    ```bash
-    bash create_cluster.sh
-    ```
+    $ bash create_cluster.sh
 
 4. Finally, update your cluster with `—yes`. This will apply the changes and create kops cluster on AWS. 
 
-    ```bash
-    kops update cluster cluster.zhy.k8s.local --yes
-    ```
+    $ kops update cluster cluster.zhy.k8s.local --yes
 
 Typically it would take `3-5` minutes for the cluster to be created. You can use `kubectl get nodes` to check if all nodes are ready. 
 
@@ -32,15 +28,10 @@ Typically it would take `3-5` minutes for the cluster to be created. You can use
 
 2. run the create script
 
-    ```bash
-    ./create_cluster.bat
-    ```
+    $ ./create_cluster.bat
 
 3. Finally, update your cluster with `—yes`. This will apply the changes and create kops cluster on AWS. 
 
-    ```bash
-    source ./env.config
-    kops update cluster cluster.zhy.k8s.local --yes
-    ```
+    $ kops update cluster cluster.zhy.k8s.local --yes
 
 Typically it would take `3-5` minutes for the cluster to be created. You can use `kubectl get nodes` to check if all nodes are ready. 
