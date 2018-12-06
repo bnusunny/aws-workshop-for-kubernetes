@@ -30,9 +30,9 @@ kops create cluster \
      --cloud=aws \
      --topology private \
      --zones=cn-northwest-1a,cn-northwest-1b,cn-northwest-1c \
-     --master-count=1 \
+     --master-count=3 \
      --master-size="t2.small" \
-     --node-count=2 \
+     --node-count=3 \
      --node-size="t2.small"  \
      --vpc=${vpcid} \
      --subnets=${SUBNET_IDS} \
