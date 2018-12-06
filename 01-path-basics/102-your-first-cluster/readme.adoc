@@ -14,6 +14,7 @@ This section will walk you through how to install a Kubernetes cluster on AWS Ch
 
 3. run the create script
 
+    $ source env.config
     $ bash create_cluster.sh
 
 4. Finally, update your cluster with `—yes`. This will apply the changes and create kops cluster on AWS. 
